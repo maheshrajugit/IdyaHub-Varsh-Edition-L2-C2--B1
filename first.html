@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+</head>
+<body>
+    <p>Hello There!</p>
+    <span id="exp"><span id="a_value">a</span> + <span id="b_value">b</span> =</span> <span id="answer"></span>
+    
+    <br> <br>
+    a = <input onchange="updateA(this.value)" type="number" id="first"/> <br>
+    b = <input onchange="updateB(this.value)" type="number" id="second"/>
+
+
+    <br><br>
+    <button onclick="find_answer()" id="find">Do math</button>
+
+    <script>
+
+        function updateA(val)
+        {
+            console.log(val)
+            document.getElementById("a_value").innerText = val;   
+        }
+
+        function updateB(val)
+        {
+            console.log(val)
+            document.getElementById("b_value").innerText = val;   
+        }
+
+        function find_answer()
+        {
+            var a = parseInt(document.getElementById("first").value);
+            var b = parseInt(document.getElementById("second").value);
+
+            //document.getElementById("exp").innerText = a + " + " + b + " = ";
+            document.getElementById("answer").innerHTML = a+b;
+        }
+        
+    </script>
+</body>
+</html>
