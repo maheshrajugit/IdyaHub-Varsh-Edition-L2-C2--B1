@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 2</title>
+</head>
+<body>
+
+    <p id="output">
+        Answer 
+    </p>
+
+    <script>
+        a=2;
+b=6;
+console.log("the sum of", a, " and", b,"is", a+b);
+
+console.log("The difference of", a ,"and", b ,"is", a-b );
+console.log("The product of", a ,"and", b ,"is", a*b );
+console.log("The quotient of", a ,"and", b ,"is", a/b );
+console.log("The remainder of", a ,"and", b ,"is", a%b );
+
+var add_ = "the sum of "+ a+ " and "+ b+" is "+ a+b;
+var diff_ = "the difference of "+ a+ " and "+ b+" is "+ (a-b);
+var prod_ = "the product of "+ a+ " and "+ b+" is "+ a*b;
+var div_ = "the division of "+ a+ " and "+ b+" is "+ a/b;
+
+document.getElementById("output").innerHTML= add_ + "<br>" + diff_ +"<br>"+ prod_ +"<br>"+ div_ +"<br>";
+
+    </script>
+</body>
+</html>
