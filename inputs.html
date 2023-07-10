@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inputs</title>
+    <style>
+
+        body 
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 
+        {
+        text-align: center;
+        color:rgb(7, 7, 75);
+        }
+        .form
+
+        {
+            display: flex;
+            flex-direction: column;
+            width:50%;
+            padding:10%;
+        }
+
+        input 
+        {
+            height:1.5rem;
+            margin:1rem;
+            padding:1rem;
+            color:blue;
+        }
+
+        p 
+        {
+            font-size: .85rem;
+            color:brown;
+        }
+        button 
+        {
+            margin:1rem;
+            padding:1rem;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Andari Bank!</h1>
+    <div class="form">
+        <input id="username" name="username" type="text" placeholder="Enter your Username">
+        <p class="error"></p>
+        <input id="password" name="password" type="password" placeholder="Enter your Password">
+        <p class="error"></p>
+        <button onclick="evaluat()" >Submit</button>
+    </div>
+
+
+    <script>
+        function evaluat()
+        {
+            var username = document.getElementById("username").value;
+            var pass = document.getElementById("password").value;
+            console.log(username,pass);
+            var heading = document.getElementsByTagName("h1");
+            var errs = document.getElementsByClassName("error");
+            if(username=="mahesh")
+            {
+                errs[0].innerText="";
+                if(pass=="123456")
+                {
+                    errs[1].innerText = "";
+                    heading[0].innerText = "Welcome "+ username;
+                    heading[0].style = "color: green;";
+                }
+                else 
+                {
+                    heading[0].style = "color:red;";
+                    errs[1].innerText = "Password is Incorrect"
+                }
+
+            }
+            else 
+            {
+                heading[0].style = "color:red;";
+                errs[0].innerText = "Username is Incorrect"
+            }
+        }
+        
+
+
+    </script>
+</body>
+</html>
