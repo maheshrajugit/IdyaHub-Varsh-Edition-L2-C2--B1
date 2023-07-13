@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+    <style>
+        body
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            background-color:aliceblue;
+        }
+
+        .body > h1
+        {
+            margin: 0%;
+            width: 100%;
+
+        }
+
+        body > .login
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 30%;
+            padding: 35%;
+            padding-top:2%;
+            
+        }
+
+        
+        body > .login > input 
+        {
+            height: 2rem;
+        }
+
+        body > .login > button
+        {
+            height: 2rem;
+            color: blue;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <h1>Instagram</h1>
+    <div class="login">
+        <input type="text" id="username" name="username" placeholder="Enter your username"><br>
+        <p class="error"></p>
+        <input type="text" id="password" name="password" placeholder="Enter your password"><br>
+        <p class="error"></p>
+        <button onclick="analyse()">Submit</button>
+    </div>
+
+    <script>
+
+        function analyse()
+        
+        {
+            var username = document.getElementById("username").value;
+            var pass = document.getElementById("password").value;
+            console.log(username,pass);
+            var heading = document.getElementsByTagName("h1");
+            var errs = document.getElementsByClassName("error");
+
+            if(username =="Gowtham")
+            {
+                errs [0].innerText="";
+                if(pass=="123456")
+                {
+                    errs [1].innerText="";
+                    heading[0].innerText= "Welcome" + username;
+                    heading[0].style= "color:green;";
+
+                }
+                else
+                {
+                    errs [1].innerText="Password is Incorrect";
+                    heading[0].style="color:red;";
+                }
+            }   
+            else
+            {
+                errs [0].innerText = "Username is Incorrect";
+                heading[0].style = "color:red;";
+                
+            }    
+
+
+            
+
+
+
+        }
+
+    </script>
+    
+</body>
+</html>
