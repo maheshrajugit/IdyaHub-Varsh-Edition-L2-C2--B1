@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops</title>
+    <style>
+        body 
+        {
+            background-color: bisque;
+        }
+        input
+        {
+            width:80%;
+        }
+
+        .rect_holder
+        {
+            display: flex;
+            flex-direction: row;
+            width:100%;
+            flex-wrap: wrap;
+        }
+        input 
+        {
+            padding:.5rem;
+            margin-bottom:1rem;
+        }
+
+        button
+        {
+            background-color: green;
+            color:yellow;
+            padding:.5rem 1rem; 
+        }
+
+        .rect_holder > div 
+        {
+            background-color: red;
+            margin:.5rem;
+            border:3px solid black;
+            border-radius: 10px;
+            width: 50px;
+            height: 30px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            color:lightblue;
+
+        }
+
+        .circle_holder
+        {
+            display: flex;
+            flex-direction: row;
+            width:100%;
+            flex-wrap: wrap;
+        }
+
+        .circle_holder > div 
+        {
+            border-radius: 50%;
+            background-color: blue;
+            margin:.5rem;
+            border:3px solid black;
+            
+            width: 50px;
+            height: 50px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            color:lightblue;
+
+        }
+
+    </style>
+    
+</head>
+<body>
+    
+    <h1>LOOPS</h1>
+    <input type="number" id="rect_no" placeholder="Enter number of rectangles u want?">
+    <h4 id="error"></h4>
+    <button onclick="renderRectangles()" >Render</button>
+    <div onclick="goTo()">
+        <!-- <a href="./loginpage-1.html" >facebook</a> -->
+        facebook    
+    </div>
+    <div class="rect_holder">
+
+    </div>
+
+    <div class="circle_holder">
+
+    </div>
+
+    <script src="./LOOPS.JS">
+
+    </script>
+</body>
+</html>
