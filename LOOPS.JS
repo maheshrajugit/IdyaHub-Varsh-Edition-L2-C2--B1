@@ -18,21 +18,26 @@ for(var i=50;i>=0;i-=5)  // init, cond , inc/dec
 
 
 var rect_no = document.getElementById("rect_no");
+var circ_no = document.getElementById("circ_no");
+var squr_no = document.getElementById("squr_no");
 var rect_holders = document.getElementsByClassName("rect_holder");
 var circ_holders = document.getElementsByClassName("circle_holder");
+var squr_holders = document.getElementsByClassName("square_holder");
 var error = document.getElementById("error");
 
 
-function goTo()
-{
-    console.log("clicked")
-    window.location.href ="loginpage-1.html"
-}
-
+// function goTo()
+// {
+//     console.log("clicked")
+//     window.location.href ="loginpage-1.html"
+// }
+  
 
 function renderRectangles()
 {
     let no_rectangles = rect_no.value ;
+    let no_circles = circ_no.value ;
+    let no_squares = squr_no.value ;
     if(no_rectangles!="")
     {
         console.log(no_rectangles);
@@ -47,21 +52,76 @@ function renderRectangles()
 
         let c=no_rectangles;
         rect_holders[0].innerHTML = temp_string;
-
-        temp_string ="";
-        while(c>0)
-        {
-
-            temp_string = temp_string + "<div>" + c + "</div>"
-
-            c--;
-        }
-        circ_holders[0].innerHTML =temp_string;
         
+        
+     
+        
+        
+        temp_string="";
+        s=no_squares;
+        a=1;
+        if(no_squares!="")
+
+        {
+            while(a<=s)
+            {
+                
+                temp_string = temp_string + "<div>" + a + "</div>";
+                
+
+                a++;
+
+
+            
+
+            }
+            squr_holders[0].innerHTML =temp_string;
+
+
+            temp_string="";
+            s=no_circles;
+            a=1;
+            if(no_circles!="")
+
+            {
+                while(a<=s)
+                {
+                    
+                    temp_string = temp_string + "<div>" + a + "</div>";
+                    
+
+                    a++;
+
+    
+                
+
+                }
+                circ_holders[0].innerHTML =temp_string;
+
+
+            }
+            else
+            {
+                error.innerHTML = "please enter valid number of circles";
+                error.style = "color:red";
+
+            }    
+
+
+        }
+        else
+        {
+            error.innerHTML = "please enter valid number of squares";
+            error.style = "color:red";
+
+        }
+
+
+
     }
     else 
     {
-        error.innerHTML = "Please enter valid number";
+        error.innerHTML = "Please enter valid number of rectangles";
         error.style = "color:red";
     }
 }

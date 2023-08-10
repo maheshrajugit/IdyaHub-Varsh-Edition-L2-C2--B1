@@ -52,7 +52,8 @@
         .circle_holder
         {
             display: flex;
-            flex-direction: row;
+            justify-content: flex-start;
+            flex-direction:row;
             width:100%;
             flex-wrap: wrap;
         }
@@ -63,7 +64,7 @@
             background-color: blue;
             margin:.5rem;
             border:3px solid black;
-            
+
             width: 50px;
             height: 50px;
             justify-content: center;
@@ -72,6 +73,29 @@
             color:lightblue;
 
         }
+        .square_holder
+        {
+            display: flex;
+            justify-content: flex-start;
+            flex-direction:row;
+            width:100%;
+            flex-wrap: wrap;
+        }
+        .square_holder > div
+        {
+            width: 50px;
+            height: 50px;
+            color:lightblue;
+            background-color:#ff2f97;
+            margin:.5rem;
+            border:3px solid black; display: flex;
+            justify-content: center;
+            align-items: center;
+           
+
+        }
+
+
 
     </style>
     
@@ -79,12 +103,16 @@
 <body>
     
     <h1>LOOPS</h1>
+    <p>Rectangle</p>
     <input type="number" id="rect_no" placeholder="Enter number of rectangles u want?">
+    <p>Circle</p>
+    <input type="number" id="circ_no" placeholder="Enter number of circles u want?">
+    <p>Square</p>
+    <input type="number" id="squr_no" placeholder="Enter number of squares u want?">
     <h4 id="error"></h4>
     <button onclick="renderRectangles()" >Render</button>
     <div onclick="goTo()">
-        <!-- <a href="./loginpage-1.html" >facebook</a> -->
-        facebook    
+        <!-- <a href="./loginpage-1.html" >facebook</a> --> 
     </div>
     <div class="rect_holder">
 
@@ -92,6 +120,10 @@
 
     <div class="circle_holder">
 
+    </div>
+
+    <div class="square_holder">
+        
     </div>
 
     <script src="./LOOPS.JS">
